@@ -1,0 +1,227 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Space Mono", monospace;
+  background-color: hsl(185, 41%, 84%);
+  place-items: center;
+}
+.title-container {
+  text-align: center;
+  margin: 50px;
+}
+.header {
+  font-size: 15px;
+  font-weight: 700;
+  color: hsl(183, 94%, 12%);
+}
+.calculator-container {
+  background-color: hsl(0, 0%, 100%);
+  border-radius: 15px;
+  padding: 30px;
+  max-width: 800px;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+.input-section {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  min-width: 400px;
+}
+.bill-input {
+  position: relative;
+  margin-bottom: 10px;
+}
+
+.bill-input label {
+  display: block;
+  font-size: 14px;
+  color: hsl(186, 14%, 43%);
+  margin-bottom: 5px;
+  font-weight: 600;
+}
+
+.icon-dollar {
+  position: absolute;
+  top: 50%;
+  left: 15px;
+  transform: translateY(-10%);
+  color: hsl(184, 14%, 56%);
+  font-size: 18px;
+}
+
+.bill-input input {
+  width: 100%;
+  padding: 10px 15px;
+  padding-left: 35px; /* 👈 creates space for the $ symbol */
+  font-size: 15px;
+  font-weight: 700;
+  text-align: right; /* aligns numbers to the right */
+  background-color: hsl(180, 31%, 95%);
+  border: none;
+  border-radius: 5px;
+  color: hsl(183, 100%, 15%);
+}
+
+.bill-input input:focus {
+  outline: 2px solid hsl(172, 67%, 45%);
+}
+.bill-input input::placeholder {
+  color: hsl(184, 14%, 56%);
+}
+.tip-selection {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+}
+.tip-selection label {
+  display: block;
+  font-size: 14px;
+  color: hsl(186, 14%, 43%);
+  margin-bottom: 5px;
+  font-weight: 600;
+}
+.tip-buttons {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin: 5px;
+  width: 100%;
+}
+.tip-button {
+  background-color: hsl(183, 100%, 15%);
+  color: hsl(0, 0%, 100%);
+  border: none;
+  border-radius: 5px;
+  padding: 10px 0;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  text-align: center;
+}
+.custom-tip {
+  padding: 10px;
+  font-size: 15px;
+  font-weight: 700;
+  text-align: center;
+  background-color: hsl(180, 31%, 95%);
+  border: none;
+  border-radius: 5px;
+  color: hsl(183, 100%, 15%);
+  cursor: pointer;
+  min-width: 0;
+}
+.people-input {
+  position: relative;
+  margin-bottom: 10px;
+}
+
+.people-input label {
+  display: block;
+  font-size: 14px;
+  color: hsl(186, 14%, 43%);
+  margin-bottom: 5px;
+  font-weight: 600;
+}
+
+.icon-person {
+  position: absolute;
+  top: 50%;
+  left: 15px;
+  transform: translateY(-10%);
+  color: hsl(184, 14%, 56%);
+  font-size: 18px;
+}
+
+.people-input input {
+  width: 100%;
+  padding: 10px 15px;
+  padding-left: 35px; /* 👈 creates space for the $ symbol */
+  font-size: 15px;
+  font-weight: 700;
+  text-align: right; /* aligns numbers to the right */
+  background-color: hsl(180, 31%, 95%);
+  border: none;
+  border-radius: 5px;
+  color: hsl(183, 100%, 15%);
+}
+
+.people-input input:focus {
+  outline: 2px solid hsl(172, 67%, 45%);
+}
+.people-input input::placeholder {
+  color: hsl(184, 14%, 56%);
+}
+.output-section {
+  background-color: hsl(183, 100%, 15%);
+  border-radius: 15px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+}
+.tip-amount {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 5px;
+}
+.tip-amount-header {
+  color: hsl(185, 14%, 82%);
+  font-size: 16px;
+  font-weight: 500;
+}
+.tip-amount-user {
+  color: hsl(186, 12%, 45%);
+  font-size: 14px;
+  font-weight: 400;
+}
+.amount-display {
+  color: hsl(172, 67%, 45%);
+  font-size: 30px;
+  font-weight: 700;
+}
+.total-amount {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+.total-amount-header {
+  color: hsl(185, 14%, 82%);
+  font-size: 16px;
+  font-weight: 500;
+}
+.total-amount-users {
+  color: hsl(186, 12%, 45%);
+  font-size: 14px;
+  font-weight: 400;
+}
+.reset-button {
+  background-color: hsl(172, 67%, 45%);
+  color: hsl(183, 100%, 15%);
+  border: none;
+  border-radius: 5px;
+  padding: 15px 0;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  width: 100%;
+  place-self: center;
+  margin-top: 10px;
+  height: 30px;
+  padding: 0 15px;
+  text-transform: uppercase;
+}
+
+.tip-button.active {
+  background-color: hsl(172, 67%, 45%);
+  color: hsl(183, 100%, 15%);
+}
