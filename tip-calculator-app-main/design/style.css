@@ -31,7 +31,6 @@ body {
   display: flex;
   flex-direction: column;
   gap: 20px;
-  min-width: 400px;
 }
 .bill-input {
   position: relative;
@@ -229,5 +228,11 @@ body {
 @media (max-width: 588px) {
   .calculator-container {
     grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 488px) {
+  .calculator-container {
+    grid-template-columns: repeat(1, 1fr);
   }
 }
